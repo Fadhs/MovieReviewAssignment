@@ -15,4 +15,9 @@
     <string name="violence">Violence</string>
     <string name="lang_used">Language used</string>
     <string name="addmovie">Add Movie</string>
+
+    <string name="mrTitle">Title:</string>
+    <string name="mrOverview">Overview:</string>
+    <string name="mrLanguage">Language:</string>
+    <string name="mrRelDate">Release Date:</string>
 </resources>
