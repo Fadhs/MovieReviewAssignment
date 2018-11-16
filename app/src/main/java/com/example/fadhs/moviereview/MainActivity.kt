@@ -22,21 +22,18 @@ class MainActivity : AppCompatActivity() {
             val checkedRadioButton = language?.findViewById(language.checkedRadioButtonId) as? RadioButton
             btnValidate()
             Toast.makeText(
-                this@MainActivity, "Title = " + movieTitle.text + System.getProperty("line.separator") +
-                        "Overview = " + movieDesc.text + System.getProperty("line.separator") +
-                        "Release date = " + relDate.text + System.getProperty("line.separator") +
-                        "Language = " + "${checkedRadioButton?.text}" + System.getProperty("line.separator") +
-                        "Not suitable for  all ages = " + cb1.isChecked + System.getProperty("line.separator") +
-                        "Reason: " +
-                        cb2.text.toString() + " = " + cb2.isChecked + System.getProperty("line.separator") +
-                        cb3.text.toString() + " = " + cb3.isChecked, Toast.LENGTH_SHORT).show()
+        this@MainActivity, "Title = " + movieTitle.text + System.getProperty("line.separator") +
+                "Overview = " + movieDesc.text + System.getProperty("line.separator") +
+                "Release date = " + relDate.text + System.getProperty("line.separator") +
+                "Language = " + "${checkedRadioButton?.text}" + System.getProperty("line.separator") +
+                "Not suitable for  all ages = " + cb1.isChecked + System.getProperty("line.separator") +
+                "Reason: " +
+                cb2.text.toString() + " = " + cb2.isChecked + System.getProperty("line.separator") +
+                cb3.text.toString() + " = " + cb3.isChecked, Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MovieRater::class.java)
-            intent.putExtra("Title", movieTitle.text)
-            intent.putExtra("Overview", movieDesc.text)
-            intent.putExtra("Language", checkedRadioButton?.text)
-            intent.putExtra("ReleaseDate", relDate.text)
-            intent.putExtra("Suitable", cb1.isChecked)
             startActivity(intent)
+            MovieRate(movieTitle.text.toString(), movieDesc.text.toString(), relDate.text.toString(), checkedRadioButton?.text.toString(),
+                cb1.isChecked )
         }
     }
 
@@ -62,6 +59,9 @@ class MainActivity : AppCompatActivity() {
             return
         } else if (relDate?.text.isNullOrBlank()){
             relDate?.error = "Field empty"
+            return
+        } else if (language?.isSelected == false){
+            rb4?.error = "Field empty"
             return
         }
 

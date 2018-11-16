@@ -36,19 +36,23 @@
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/eng"/>
+                android:text="@string/eng"
+                android:id="@+id/rb1"/>
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/chi"/>
+                android:text="@string/chi"
+                android:id="@+id/rb2"/>
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/malay"/>
+                android:text="@string/malay"
+                android:id="@+id/rb3"/>
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tamil"/>
+                android:text="@string/tamil"
+                android:id="@+id/rb4"/>
     </RadioGroup>
     <TextView
             android:layout_width="wrap_content"
