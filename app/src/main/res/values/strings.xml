@@ -10,7 +10,7 @@
     <string name="malay">Malay</string>
     <string name="tamil">Tamil</string>
     <string name="rel_date">Release date</string>
-    <string name="hintdate">Enter release date</string>
+    <string name="hintdate">Enter release date (DD/MM/YY)</string>
     <string name="unsuitable">Not suitable for all audience</string>
     <string name="violence">Violence</string>
     <string name="lang_used">Language used</string>
@@ -20,4 +20,8 @@
     <string name="mrOverview">Overview:</string>
     <string name="mrLanguage">Language:</string>
     <string name="mrRelDate">Release Date:</string>
+    <string name="mrSuitable">Suitable for children below 13:</string>
+
+    <string name="enterReview">Enter your review for the movie: </string>
+    <string name="shareView">Share your view on the show</string>
 </resources>
